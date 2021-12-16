@@ -2,27 +2,28 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-          echo 'Building...'
-      }
-      post{
+      post {
         failure {
-          echo "Build failed"
-          
+          echo 'Build failed'
         }
+
+      }
+      steps {
+        echo 'Building...'
       }
     }
 
     stage('Test') {
       steps {
-          echo 'Testing...'
+        echo 'Testing...'
       }
     }
 
     stage('Deploy') {
       steps {
-          echo 'Deploying...'
+        echo 'Deploying...'
       }
     }
+
   }
 }
