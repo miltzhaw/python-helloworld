@@ -5,8 +5,7 @@ pipeline {
       post {
         failure {
           echo 'Build failed'
-        }
-
+        } 
       }
       steps {
         echo 'Building...'
